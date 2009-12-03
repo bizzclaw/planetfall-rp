@@ -1,0 +1,13 @@
+"Refract"
+{
+ 	"$model" 1
+	"$bluramount" "1"
+	"$surfaceprop" "glass"
+ 	"$refractamount" ".100"
+	"$REFRACTTINT" "{185 185 185}"
+	"$scale" "[1 1]"
+    "$normalmap" "refract\refractGlass007_normal"
+    "$dudvmap" "refract\refractGlass007_dudv"
+	//"$envmap" "env_cubemap"
+	//"$envmaptint" "[.3 .4 .4]"
+}

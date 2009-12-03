@@ -1,0 +1,5 @@
+LightmappedGeneric
+{
+	"$basetexture"	"custom\keypad_button_1"
+      "$surfaceprop"    "rubber"
+}

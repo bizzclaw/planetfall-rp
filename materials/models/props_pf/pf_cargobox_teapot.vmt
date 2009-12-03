@@ -1,0 +1,11 @@
+"VertexlitGeneric"
+{
+	$basetexture "models/props_pf/pf_cargobox_teapot"
+	$bumpmap "models/props_pf/pf_cargobox_teapot_normal"
+
+	$phong			1
+	$phongexponent		33
+	$phongboost		18.0
+	$phongfresnelranges	"[0 0.5 1]"
+
+}

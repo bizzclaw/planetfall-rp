@@ -1,0 +1,6 @@
+"vertexlitgeneric"
+{
+	// original shader: basetimeslightmap
+	"$basetexture" "dev/dev_hazzardstripe01a"
+	"$surfaceprop" "concrete"
+}

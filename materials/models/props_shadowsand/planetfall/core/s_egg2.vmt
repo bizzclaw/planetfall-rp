@@ -1,0 +1,5 @@
+"vertexlitgeneric"
+{
+	"$basetexture" "/cncr04sp2/metal/s_egg2"
+	"$surfaceprop" "metal"
+}

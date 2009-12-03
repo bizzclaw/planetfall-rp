@@ -1,0 +1,8 @@
+"vertexlitGeneric"
+{
+	"$baseTexture" "models\tomdon_tree\tomdon_tree_leaves"
+	"$translucent" 1
+ 	"$alphatest" 1
+	"$nocull" 1
+ 
+}

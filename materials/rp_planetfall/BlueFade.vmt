@@ -1,0 +1,6 @@
+"LightmappedGeneric"
+{
+        "$translucent" 1
+	"$basetexture" "rp_planetfall/BlueFade"
+        "$nocull" 1
+}

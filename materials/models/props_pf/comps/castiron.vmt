@@ -1,0 +1,12 @@
+"VertexLitGeneric"
+{
+	$basetexture "models/props_pf/comps/castiron"
+	$halflambert 1
+	$bumpmap "models/props_pf/comps/castiron_normal"
+
+	$phong			1
+	$phongexponent		33
+	$phongboost		8.0
+	$phongfresnelranges	"[0 0.5 1]"
+
+}
