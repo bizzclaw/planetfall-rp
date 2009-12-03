@@ -1,0 +1,12 @@
+"VertexlitGeneric"
+{
+	$basetexture "models/props_pf/comps/PowerCell"
+	$halflambert 1
+	$selfillum 1
+
+	$phong			1
+	$phongexponent		33
+	$phongboost		8.0
+	$phongfresnelranges	"[0 0.5 1]"
+
+}

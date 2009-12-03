@@ -1,0 +1,6 @@
+"Sky"
+{
+"$nofog" 1
+"$ignorez" 1
+	"$basetexture" "skybox/sky_stene02dn"
+}

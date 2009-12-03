@@ -1,0 +1,11 @@
+"AddonInfo"
+{
+	"name"				"Planetfall"
+	"version"			"Beta 5-2"
+	"up_date"			"December 3rd 2009"
+	"author_name"			"Shadowsand"
+	"author_email"			""
+	"author_url"			"http://www.planetfallrp.com/"
+	"info"				"rp_planetfall_v2"
+	"override"			"0"
+}

@@ -1,0 +1,6 @@
+"vertexlitGeneric"
+{
+	"$baseTexture" "models\tomdon_tree\tomdon_bark"
+"$bumpmap" "models/tomdon_tree\tomdon_bark_normal"
+	
+}

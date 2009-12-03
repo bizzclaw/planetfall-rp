@@ -1,0 +1,12 @@
+"VertexlitGeneric"
+{
+	$basetexture "models/props_pf/comps/C4Sides"
+	$halflambert 1
+	//$bumpmap "models/props_pf/comps/C4Sides_normal"
+
+	$phong			1
+	$phongexponent		33
+	$phongboost		8.0
+	$phongfresnelranges	"[0 0.5 1]"
+
+}
