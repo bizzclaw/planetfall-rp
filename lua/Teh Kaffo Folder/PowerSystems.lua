@@ -12,11 +12,14 @@ shield_parts = { [1] = "Sld1_B1", [2] = "Sld1_B2", [3] = "Sld1_B3", [4] = "Sld1_
 function Clock() 
 	//local section of doooooom!
 	
-	local lift_power = 100 //the ammount of power the lift takes per clock
-	local shield_power = 900 //read above, guess
-	local power_generated = 1000 //the ammount of power generated per clock
-	local max_storage = 10000 //the maximum ammount of power the battery can store
-	local s_enabled = 0
+	if declared == nil then
+		local lift_power = 100 //the ammount of power the lift takes per clock
+		local shield_power = 900 //read above, guess
+		local power_generated = 1000 //the ammount of power generated per clock
+		local max_storage = 10000 //the maximum ammount of power the battery can store
+		local s_enabled = 0 // Silly boolean for the silly thing to enable/disable shields
+		local declared = 1 
+	end
 	
 	if item["power"] == 1 && item["gen"] == 1 then
 		cur_power = cur_power + power_generated
