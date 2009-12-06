@@ -27,5 +27,9 @@ function ENT:AcceptInput (name, f , g , data)
 		elseif (name == "ShieldPower") && (data == "0") then Off("shield")
 		else print("Error With Controller, A value has been entered incorrectly!")
 	end
+	if (name == "Lockdown") && (data == "true") then Lockdown(true)
+		elseif (name == "Lockdown") && (data == "false") then Lockdown(false)
+		else print("Error With Controller, A value has been entered incorrectly!")
+	end
 	if (name == "Test") then Debug() end
 end
