@@ -5,6 +5,7 @@
 cur_power = 10000 //starting power/current power
 item = { ["power"] = 1, ["gen"] = 1, ["lift"] = 0, ["shield"] = 0 }
 shield_parts = { [1] = "Sld1_B1", [2] = "Sld1_B2", [3] = "Sld1_B3", [4] = "Sld1_B4", [5] = "Sld1_B5", [6] = "Sld1_B6", [7] = "Sld1_B7", [8] = "Sld1_B8" }
+lockdown_doors = { [1] = "Brdg_D", [2] = "LQ_D2", [3] = "Holo_D", [4] = "LQ_D", [5] = "HSC_D2", [6] = "Utl_BD", [7] = "Civ_BD", [8] = "Med_D", [9] = "Cic_BD2", [10] = "H2_D2", [11] = "AS2_D2", [12] = "H2_D3", [13] = "Prn_D", [14] = "H1_D4", [15] = "H2_D1", [16] = "BS_D", [17] = "Mnt1_Br", [18] = "Mnt1_BD", [19] = "HSC_D", [20] = "Gen_D", [21] = "H1_D", [22] = "H1_D1" }
 
 /*-----------------------------------------------------------------------------------
  The cycle that happens every second to caclulate the current power|
@@ -46,7 +47,7 @@ function Clock()
 	if item["shield"] == 1 then
 		if s_enabled == 0 then
 			for i = 1, 8 do
-				cur_ent = ents.FindByName(shield_parts[i])
+				local cur_ent = ents.FindByName(shield_parts[i])
 				cur_ent:Fire ("Enable",, (5 + ((i / 10) - 0.1) )
 			end
 			local s_enabled = 1
@@ -58,11 +59,11 @@ end
  Collection of switches to turn stuff on and off                                  |
  -----------------------------------------------------------------------------------*/
 
-function Switch(thingy)
-	if item[thingy] == 1 then
-		item[thingy] = 0
+function Switch(i)
+	if item[i] == 1 then
+		item[i] = 0
 	else
-		item[thingy] = 1
+		item[i] = 1
 	end
 end
 
@@ -70,14 +71,34 @@ end
  These aren't switchs as such, more controls so that we can turn stuff on or off when we want|
  --------------------------------------------------------------------------------------------------------------------*/
 
-function On(thingy)
-	item[thingy] = 1
+function On(i)
+	item[i] = 1
 end
 
-function Off(thingy)
-	item[thingy] = 0
+function Off(i)
+	item[i] = 0
 end
 
+/*---------------------------------------------------------------------------------------------------------------------------------
+Pretty simple fucntion that Shadow asked for that will lockdown the ship for him without Hammer Logic|
+ --------------------------------------------------------------------------------------------------------------------------------*/
+
+function Lockdown(active)
+
+	if active = true then 
+		local action1 = "Close"
+		local action2 = "Lock"
+	else
+		local action1 = "Unlock"
+		local action2 = "Open"
+	end
+	
+	for i = 1, 22 do
+		local cur_ent = ents.FindByName(lockdown_doors[i])
+		cur_ent:Fire (action1)
+		cur_ent:Fire (action2)
+	end
+end
 
 /*-----------------------------------------------------------------------------------
  Dev fuction so I could easily tell whats going on, ignore it tbh         |
