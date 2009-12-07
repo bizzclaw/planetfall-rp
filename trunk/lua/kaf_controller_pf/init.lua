@@ -10,7 +10,7 @@ function ENT:AcceptInput (name, f , g , data)
 	if (name == "PowerSwitch") then Switch("power") end
 	if (name == "LiftSwitch") then Switch("lift") end
 	if (name == "ShieldSwitch") then Switch("shield") end
-	if (name == "Lockdown") && (data == "active") then Lockdown()
+	if (name == "Lockdown") && (data == "true") then Lockdown()
 	
 	if (name == "GenPower") && (data == "1") then On("gen")
 		elseif (name == "GenPower") && (data == "0") then Off("gen")
