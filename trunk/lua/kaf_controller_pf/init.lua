@@ -1,6 +1,8 @@
 ENT.Base = "base_entity"
 ENT.Type = "point"
 
+include("PowerSystems.lua")
+
 function ENT:Initialize()
 end
 
