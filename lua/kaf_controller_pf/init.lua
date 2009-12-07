@@ -10,6 +10,7 @@ function ENT:AcceptInput (name, f , g , data)
 	if (name == "PowerSwitch") then Switch("power") end
 	if (name == "LiftSwitch") then Switch("lift") end
 	if (name == "ShieldSwitch") then Switch("shield") end
+	if (name == "Lockdown") && (data == "active") then Lockdown()
 	
 	if (name == "GenPower") && (data == "1") then On("gen")
 		elseif (name == "GenPower") && (data == "0") then Off("gen")
@@ -25,10 +26,6 @@ function ENT:AcceptInput (name, f , g , data)
 	end
 	if (name == "ShieldPower") && (data == "1") then On("shield")
 		elseif (name == "ShieldPower") && (data == "0") then Off("shield")
-		else print("Error With Controller, A value has been entered incorrectly!")
-	end
-	if (name == "Lockdown") && (data == "true") then Lockdown(true)
-		elseif (name == "Lockdown") && (data == "false") then Lockdown(false)
 		else print("Error With Controller, A value has been entered incorrectly!")
 	end
 	if (name == "Test") then Debug() end

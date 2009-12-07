@@ -83,14 +83,16 @@ end
 Pretty simple fucntion that Shadow asked for that will lockdown the ship for him without Hammer Logic|
  --------------------------------------------------------------------------------------------------------------------------------*/
 
-function Lockdown(active)
+function Lockdown()
 
-	if active = true then 
+	if active = nil then 
 		local action1 = "Close"
 		local action2 = "Lock"
-	else
+		local active = 1
+	elseif active = 1
 		local action1 = "Unlock"
 		local action2 = "Open"
+		local active = nil
 	end
 	
 	for i = 1, 22 do
