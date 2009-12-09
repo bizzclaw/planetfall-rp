@@ -7,6 +7,8 @@ item = { ["power"] = 1, ["gen"] = 1, ["lift"] = 0, ["shield"] = 0 }
 shield_parts = { [1] = "Sld1_B1", [2] = "Sld1_B2", [3] = "Sld1_B3", [4] = "Sld1_B4", [5] = "Sld1_B5", [6] = "Sld1_B6", [7] = "Sld1_B7", [8] = "Sld1_B8" }
 lockdown_doors = { [1] = "Brdg_D", [2] = "LQ_D2", [3] = "Holo_D", [4] = "LQ_D", [5] = "HSC_D2", [6] = "Utl_BD", [7] = "Civ_BD", [8] = "Med_D", [9] = "Cic_BD2", [10] = "H2_D2", [11] = "AS2_D2", [12] = "H2_D3", [13] = "Prn_D", [14] = "H1_D4", [15] = "H2_D1", [16] = "BS_D", [17] = "Mnt1_Br", [18] = "Mnt1_BD", [19] = "HSC_D", [20] = "Gen_D", [21] = "H1_D", [22] = "H1_D1" }
 
+print("Power Loaded!")
+
 /*-----------------------------------------------------------------------------------
  The cycle that happens every second to caclulate the current power|
  -----------------------------------------------------------------------------------*/
@@ -38,7 +40,7 @@ function Clock()
 		if s_enabled == 1 then 
 			for i = 1, 8 do
 				cur_ent = ents.FindByName(shield_parts[i])
-				cur_ent:Fire ("Disable",, ((i / 10) - 0.1 )
+				cur_ent:Fire ("Disable", "" , ((i / 10) - 0.1 ))
 			end
 			local s_enabled = 0
 		end
@@ -48,7 +50,7 @@ function Clock()
 		if s_enabled == 0 then
 			for i = 1, 8 do
 				local cur_ent = ents.FindByName(shield_parts[i])
-				cur_ent:Fire ("Enable",, (5 + ((i / 10) - 0.1) )
+				cur_ent:Fire ("Enable", "" , (5 + ((i / 10) - 0.1) ))
 			end
 			local s_enabled = 1
 		end
@@ -85,20 +87,21 @@ Pretty simple fucntion that Shadow asked for that will lockdown the ship for him
 
 function Lockdown()
 
-	if active = nil then 
-		local action1 = "Close"
-		local action2 = "Lock"
-		local active = 1
-	elseif active = 1
-		local action1 = "Unlock"
-		local action2 = "Open"
-		local active = nil
+	if active == nil then 
+		input_one = "Close"
+		input_two = "Lock"
+		active = 1
+	elseif active == 1 then
+		input_one = "Unlock"
+		input_two = "Open"
+		active = nil
 	end
-	
-	for i = 1, 22 do
-		local cur_ent = ents.FindByName(lockdown_doors[i])
-		cur_ent:Fire (action1)
-		cur_ent:Fire (action2)
+
+	for k,v in pairs(lockdown_doors) do
+		for j,i in pairs(ents.FindByName(v)) do
+			i:Fire (input_one, "", 0)
+			i:Fire (input_two, "", 0)
+		end
 	end
 end
 
