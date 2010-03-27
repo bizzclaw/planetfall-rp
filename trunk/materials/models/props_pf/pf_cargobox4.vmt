@@ -1,0 +1,11 @@
+"VertexlitGeneric"
+{
+	$basetexture "models/props_pf/pf_cargobox4"
+	$bumpmap "models/props_pf/pf_cargobox4_normal"
+
+	$phong			1
+	$phongexponent		33
+	$phongboost		8.0
+	$phongfresnelranges	"[0 0.5 1]"
+
+}

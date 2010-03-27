@@ -1,0 +1,16 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "Shadowsand/Planetfallv2/PowerInd-New"
+	"$surfaceprop" "glass"
+	"$frame" 0
+
+ 	 "Proxies" 
+  	{ 
+   		"ToggleTexture"
+  		 {
+    			"toggleTextureVar" "$baseTexture"
+   			"toggleTextureFrameNumVar" "$frame"
+    			"toggleTextureShouldWrap" "0"
+   		} 	
+  	} 
+ }
