@@ -1,0 +1,5 @@
+"vertexlitgeneric"
+{
+	"$basetexture" "/cncr04sp3/metal/diamond-grate01"
+	"$surfaceprop" "metal"
+}
