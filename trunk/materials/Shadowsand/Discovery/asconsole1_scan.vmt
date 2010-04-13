@@ -1,0 +1,15 @@
+"LightMappedGeneric"
+{
+	"$basetexture" "Shadowsand/Discovery/asconsole1_scan"
+	 "$surfaceprop" "metal"
+	"$frame" 1
+  "Proxies" 
+  { 
+   "ToggleTexture"
+   {
+    "toggleTextureVar" "$baseTexture"
+    "toggleTextureFrameNumVar" "$frame"
+    "toggleTextureShouldWrap" "0"
+   } 	
+  } 
+ }

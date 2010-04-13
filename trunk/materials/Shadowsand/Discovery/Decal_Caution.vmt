@@ -1,0 +1,7 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "Shadowsand/Discovery/Decal_Caution"
+	$decal		1
+	$decalscale	0.25
+	$translucent	1
+}
